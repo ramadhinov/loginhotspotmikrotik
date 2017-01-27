@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Login Hotspot Sekolah</title>
+
+  <!-- CSS  -->
+  <link href="css/font.css" rel="stylesheet">
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+<style type="text/css">
+html,
+body {
+    height: 100%;
+}
+.margin {
+  margin: 0 !important;
+}
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+</style>
+</head>
+<body>
+
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+
+<!-- Menu Top Navbar -->
+  <nav class="red darken-3 z-depth-2" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo" style="font-size:20px;"><i class="material-icons left">business</i><b>HOTSPOT</b> SMKN 2 TASIKMALAYA</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#modal1" class="modal-trigger">Tentang Pembuat</a></li>
+      </ul>
+    </div>  
+  </nav>
+  
+ <!-- Menu Top Navbar --> 
+   <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <div class="row">
+		<div class="col s12 m12 l7 hide-on-med-and-down">
+			<h3 class="header col s12 left red-text text-darken-2">Selamat Datang !</h3>
+			<h5 class="col s12 left grey-text text-darken-3">Dengan menggunakan layanan internet sehat sekolah SMK Negeri 2 Tasikmalaya ini, anda berarti menyetujui segala bentuk ketentuan yang berlaku.</h5>
+		</div>
+		<div class="col s12 m12 l5" style="border: 1px solid #e0e0e0;padding: 20px;">
+			<form class="login-form" name="login" action="$(link-login-only)" method="post"
+				$(if chap-id) onSubmit="return doLogin()" $(endif)>
+		
+				<input type="hidden" name="dst" value="smkn2kotatasik.sch.id" />
+				<input type="hidden" name="popup" value="true" />
+				
+				<div class="row" style="border-bottom: 1px solid #ccc">
+				  <div class="input-field">
+					<img class="responsive-img" src="img/img_head_member_login.png" alt="Member Login" />
+					<!-- <h5 class="header col s12 left red-text text-darken-2"><i class="medium material-icons margin">new_releases</i>&nbsp;&nbsp;Login Disini</h5> -->
+				  </div>
+				</div>
+				
+				<div class="row margin">
+				  <div class="input-field">
+					<i class="material-icons prefix">perm_identity</i>
+					<input id="username" type="text" name="username" value="$(username)">
+					<label for="username">Username</label>
+				  </div>
+				</div>
+				
+				<div class="row margin">
+				  <div class="input-field">
+					<i class="material-icons prefix">lock</i>
+					<input id="password" type="password" name="password">
+					<label for="password">Password</label>
+				  </div>
+				</div>
+				
+				<div class="row margin">
+				  <div class="input-field col s12">
+					<button type="submit" class="btn waves-effect waves-light col s12 red darken-2">Login</button>
+				  </div>				
+				</div>
+				
+				<div class="row">
+				  <div class="input-field col s6 m6 l6">
+					  <p class="margin medium-small"><a href="#modal2" class="modal-trigger">Butuh bantuan?</a></p>
+				  </div>
+				  <div class="input-field col s6 m6 l6">
+				  
+				  </div>          
+				</div>
+			</form>
+		</div>
+      </div>
+	  <br><br>
+
+    </div>
+  </div>
+
+  <footer class="page-footer red darken-3 z-depth-5">
+    <div class="container">
+      <div class="row">
+        <div class="col l12 s12">
+          <h5 class="white-text">Tentang Layanan</h5>
+          <p class="grey-text text-lighten-4">Sekolah menyediakan akses layanan internet gratis <b>khusus</b> untuk guru, dan staff TU untuk membantu proses PBM dan administrasi.</p>
+        </div>
+        
+      </div>
+    </div>
+    <div class="footer-copyright black">
+      <div class="container ">
+      &copy 2017 <b>Hotspot</b>Sekolah. All rights reserved | Design by <a class="orange-text text-lighten-3" href="http://ramadhinov.github.io">Ramadhan</a>
+      </div>
+    </div>
+  </footer>
+
+	<!-- Modal Structure -->
+	  <div id="modal1" class="modal">
+			<div class="modal-content">
+			  <h4>Tentang Kami</h4>
+			  <p>Penyedia jasa pemasangan dan konfigurasi akses internet skala kecil dan menengah. <b>UPJ Teknik Komputer dan Jaringan</b>.</p>
+			  <table class="striped">
+			  <tr>
+				<td style="width:30px;"><i class="material-icons">business</i></td>
+				<td>Kampus SMKN 2 Tasikmalaya, Lt. 2 Gd Merah TKJ.</td>
+			  </tr>
+			  <tr>
+				<td><i class="material-icons">phone</i></td>
+				<td>0813-2312-9704 (<b>whatsapp only</b>)</td>
+			  </tr>
+			  <tr>
+				<td><i class="material-icons">email</i></td>
+				<td><a href="mailto:tkj@smkn2kotatasik.sch.id">tkj@smkn2kotatasik.sch.id</a></td>
+			  </tr>
+			</table>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons left">system_update_alt</i>Tutup</a>
+			</div>	
+     </div>	 
+	  <div id="modal2" class="modal">
+			<div class="modal-content">
+			  <h4>Ketentuan Akses Internet</h4>
+			  <p>Bagi yang memiliki masalah <i>username/password</i> atau tidak memiliki akun login, harap baca ketentuan berikut:</p>
+			  <table class="striped">
+			  <tr>
+				<td style="width:30px;"><i class="material-icons">play_arrow</i></td>
+				<td>Akun login hanya diperuntukan bagi guru/staf tata usaha.</td>
+			  </tr>
+			  <tr>
+				<td><i class="material-icons">play_arrow</i></td>
+				<td>Akun login hanya berlaku untuk akses internet dengan jalur resmi sekolah, bukan @wifi.id atau sebagainya.</td>
+			  </tr>
+			  <tr>
+				<td><i class="material-icons">play_arrow</i></td>
+				<td>Bila akun login tidak dapat digunakan (masalah dari server) silakan untuk melapor.</td>
+			  </tr>
+			  <tr>
+				<td><i class="material-icons">play_arrow</i></td>
+				<td>Pertanyaan lebih lanjut bisa mengirim email melalui <b>admin@smkn2kotatasik.sch.id</b> atau melalui whatsapp (<b>0852-2313-869</b>).</td>
+			  </tr>
+			</table>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons left">system_update_alt</i>Tutup</a>
+			</div>	
+     </div>		 
+
+<!--  Scripts-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/init.js"></script>
+  
+  <script>
+	$(document).ready(function() {
+	  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+	  $('.modal-trigger').leanModal();
+	});
+  </script>
+  
+  $(if error)
+  <script>
+  	Materialize.toast('<span>$(error)</span>', 3000)
+  </script>
+  $(endif)
+
+  <script type="text/javascript">
+	  <!--
+	  document.login.username.focus();
+	  //-->
+  </script>
+
+  </body>
+</html>
